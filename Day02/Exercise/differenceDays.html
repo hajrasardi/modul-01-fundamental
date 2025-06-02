@@ -1,0 +1,11 @@
+<!-- 
+Write a code to get difference between dates in days.
+○ Example : date1 = 2022-01-20, date2 = 2022-01-22
+○ Output : 2
+-->
+<script>
+  const date1 = new Date(prompt("Masukkan tanggal yyyy-mm-dd"));
+  const date2 = new Date(prompt("Masukkan tanggal yyyy-mm-dd"));
+  const difference = parseInt((date2 - date1) / (1000 * 60 * 60 * 24), 10);
+  alert(`${difference}`);
+</script>
