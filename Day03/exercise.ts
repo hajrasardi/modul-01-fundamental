@@ -1,7 +1,7 @@
 // Write a code to check whether the number is odd or even
 // Example: 25 → odd number, 2 → even number
 
-let isNumber: number = 13;
+let isNumber: number = 7;
 
 if (isNumber % 2 === 0) {
   console.log(`${isNumber} Adalah bilangan genap`);
@@ -12,12 +12,12 @@ if (isNumber % 2 === 0) {
 // Write a code to check whether the number is prime number or not
 // ○ Example: 7 → 7 is a prime number
 // ○ Example: 6 → 6 is not a prime number
-let isPrime = true;
+let isPrime: boolean = true;
 
 if (isNumber <= 1) {
   isPrime = false;
 } else {
-  for (let i = 0; i <= Math.sqrt(isNumber); i++) {
+  for (let i = 2; i <= Math.sqrt(isNumber); i++) {
     if (isNumber % i === 0) {
       isPrime = false;
       break;
