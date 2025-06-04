@@ -1,0 +1,33 @@
+<script>
+  // Menyiapkan daftar menu
+  const daftarMenu = [
+    "Lihat Produk",
+    "Tambah Produk",
+    "Perbarui Produk",
+    "Hapus Produk",
+  ];
+
+  function lihatMenu() {
+    // Menampilkan nama menu dalam prompt
+    let namaMenu = "";
+
+    for (let index = 0; index < daftarMenu.length; index++) {
+      namaMenu += `${index + 1}. ${daftarMenu[index]} \n`;
+    }
+    alert(namaMenu);
+  }
+  let option;
+  do {
+    option = prompt(
+      "Pilih Menu \n 1. Lihat Menu \n 2. Tambah Produk \n 3. Update Produk \n 4. Hapus Produk \n 5. Keluar"
+    );
+    switch (option) {
+      case "1":
+        lihatMenu();
+        break;
+
+      default:
+        break;
+    }
+  } while (option !== 5);
+</script>

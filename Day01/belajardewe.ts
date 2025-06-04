@@ -52,3 +52,17 @@ for (let i = 1; i <= N; i++) {
 }
 
 console.log(`The sum from 1 to ${N} is ${sum}`);
+
+<script>
+  const angka = prompt("Masukkan Angka");
+  let angka2 = parseInt(angka);
+  if (angka2 < 365) {
+    console.log();
+    
+  }
+  const year = parseInt(angka / 365);
+  const month = parseInt((angka % 365) / 30);
+  const day = parseInt((angka % 365) % 30);
+  alert(`${angka} = ${year} year ${month} month ${day} day`);
+</script>
+

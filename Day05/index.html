@@ -1,0 +1,93 @@
+<script>
+  // 1. perhatikan data nya / apa yang harus diolah oleh aplikasi
+  const database = [
+    ["Kaos", 35000, 12], // data yang diolah
+    ["celana", 70000, 8], // data yang diolah
+    ["Jaket", 40000, 3],
+  ]; // data yang diolah
+
+  let [namaBarang, hargaBarang, jumlahBarang] = database;
+
+  // Buat halaman utama / landing page
+  const menu = prompt(`=== Menu Management Data ===
+    1. Lihat Data
+    2. Tambah Data
+    3. Perbarui Data
+    4. Hapus Data
+    5. Keluar
+
+    Masukkan nomor menu yang dipilih`);
+  //   cek / running apakah ada error
+
+  //
+  function lihatData() {
+    // 1. Menyiapkan penampung output tampilan data
+    let daftar = "=== Daftar Data === \n";
+    for (let index = 0; index < database.length; index++) {
+      // 2. Mengakses data didalam array satu per satu
+      const value = database[index];
+      // 3. Menambahkan tiap data ke dalam variable output
+      daftar = daftar + `${index + 1}. ${value} \n`; // daftar +=`${index + 1}. ${value} \n`;
+    }
+
+    // 4. Menampilkan data output
+    alert(daftar);
+  }
+
+  function tambahData() {
+    // 1. Menerima input data baru
+    const nama = prompt("Masukkan nama data baru : ");
+    const harga = prompt("Masukkan harga data baru : ");
+    const stok = prompt("Masukkan stok data baru : ");
+
+    // 2. Menambahkan data kedalam database
+    database.push([nama, harga, stok]);
+    alert(`Penambahan data ${nama} ${harga} ${stok} berhasil;`);
+  }
+
+  function perbaruiData() {
+    // tampilkan database
+    lihatData();
+    // 1. pilih data yang akan di perbarui
+    const update = parseInt(prompt("Masukkan nomor yang akan di perbarui :"));
+    const updatenama = prompt("masukkan nama ");
+    const updateHarga = prompt("masukkan harga ");
+    const updatestok = prompt("masukkan jumlah stok ");
+
+    database[update - 1][0] = updatenama;
+    database[update - 1][1] = updateHarga;
+    database[update - 1][2] = updatestok;
+    alert(`${updatenama} ${updateHarga} ${updatestok} berhasil diupdate`);
+  }
+
+  function hapusData() {
+    lihatData();
+    const deleted = parseInt(prompt("Masukkan nomor yang akan di hapus : "));
+    database.splice(deleted - 1, 1);
+    alert("data berhasil dihapus");
+  }
+
+  do {
+    const menu = prompt(`=== Menu Management Data ===
+    1. Lihat Data
+    2. Tambah Data
+    3. Perbarui Data
+    4. Hapus Data
+    5. Keluar
+
+    Masukkan nomor menu yang dipilih`);
+
+    if (menu === "1") {
+      //menjalankan fungsi lihatData
+      lihatData(); //dibutuhkan looping statement untuk kembali ke menu sebelumnya
+    } else if (menu === "2") {
+      tambahData();
+    } else if (menu === "3") {
+      perbaruiData();
+    } else if (menu === "4") {
+      hapusData();
+    } else if (menu === "5") {
+      break; //karna truthly / nilai boolean asli, menghentikan looping menggunakan break.
+    }
+  } while (true);
+</script>

@@ -23,12 +23,19 @@ console.log(daftarSiswa[1]);
 console.log(daftarKelas);
 
 // Array destructure : Mengakses data pada array dengan menandai tiap data menggunakan variable.
-const data: any[] = ["Abdi", 20, "Sidoarjo"];
+const data: any[] = [
+  ["Abdi", 20, "Sidoarjo"],
+  ["hajra", 21, "Pekanbaru"],
+];
 let [namaOrang, usia, asal] = data;
 
 console.log(namaOrang);
 console.log(usia);
 console.log(asal);
+console.log(data);
+data[0][1] = 10;
+console.log(data);
+data.push(namaOrang);
 
 // ingin memperbarui suatu data array :
 // Reassign :

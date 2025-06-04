@@ -1,0 +1,39 @@
+<script>
+  function lihatMenu() {
+    const namaProduk = ["Frutang", "Torpedo", "Ale-ale"];
+  }
+  // Menyiapkan daftar menu
+  const daftarMenu = [
+    "Lihat Produk",
+    "Tambah Produk",
+    "Perbarui Produk",
+    "Hapus Produk",
+  ];
+  // Menampilkan nama menu dalam prompt
+  let namaMenu = "===Menu Produk=== \n";
+
+  for (let index = 0; index < daftarMenu.length; index++) {
+    namaMenu += `${index + 1}. ${daftarMenu[index]} \n`;
+  }
+
+  //   menambahkan pilihan untuk keluar
+  namaMenu += "5. Keluar";
+  // menampilkan promp dan input pengguna
+  let pilih = prompt(namaMenu, "Pilih nomor menu");
+  if (pilih) {
+    if (pilih > 0 && pilih <= daftarMenu.length) {
+      alert("Menu " + daftarMenu[pilih - 1]);
+        do {
+          alert(namaProduk[i]);
+          nomor += ` ${i + 1}. ${namaProduk[i]}`;
+        } while (i < namaProduk.length);
+      }
+    } else if (pilih === 5) {
+      alert("anda memilih untuk keluar");
+    } else {
+      alert("Pilihan tidak valid silahkan pilih kembali");
+    }
+  } else {
+    alert("Pilihan dibatalkan.");
+  }
+</script>

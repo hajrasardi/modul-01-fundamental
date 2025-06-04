@@ -91,3 +91,12 @@ for (let i: number = 0; i < limit; i++) {
   }
 }
 console.log(cetak);
+
+const myArray = ["apel", "pisang", "jeruk", "mangga"];
+let isi = 0;
+
+do {
+  console.log(myArray[isi]);
+  isi++;
+} while (isi < myArray.length);
+// Kondisi perulangan: selama i kurang dari panjang array
