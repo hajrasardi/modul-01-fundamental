@@ -1,0 +1,68 @@
+<!-- 
+Buatlah program untuk melihat produk dan menambahkan produk :
+1. Biskuat
+2. Le Mineral 
+-->
+<script>
+  // Siapkan data yang ingin diolah
+  //   biskuat
+  const databaseBiskuat = [
+    ["Biskuat Coklat", 20],
+    ["Biskuat Vanila", 30],
+  ];
+  let [rasa, stokBiskuat] = databaseBiskuat;
+  //   Le Mineral
+  const databaseLemineral = [
+    ["600 ml", 15],
+    ["300 ml", 8],
+  ];
+  let [ukuran, jumlahBiskuat] = databaseLemineral;
+
+  //   Buat halaman untuk landing page
+  const halamanUtama = prompt(`=== Selamat Datang === \n
+  1. Biskuat
+  2. Le Mineral
+  3. keluar
+
+  Masukkan nomor menu : `);
+  // Cek running apakah ada error
+
+  function lihatData() {
+    // penampung output tampilan data biskuat
+    let menu = "Daftar Produk \n";
+    for (let index = 0; index < databaseBiskuat.length; index++) {
+      // mengakses data didalam database satu persatu
+      const value = databaseBiskuat[index];
+      // menambahkan data index dan database kedalam output
+      menu = menu + `${index + 1}. ${value} \n`;
+    }
+    alert(menu);
+  }
+  function lihatDataLemineral() {
+    // penampung output tampilan data biskuat
+    let menu = "Daftar Produk \n";
+    for (let index = 0; index < databaseLemineral.length; index++) {
+      // mengakses data didalam database satu persatu
+      const value = databaseLemineral[index];
+      // menambahkan data index dan database kedalam output
+      menu = menu + `${index + 1}. ${value} \n`;
+    }
+    alert(menu);
+  }
+
+  do {
+    const halamanUtama = prompt(`=== Selamat Datang === \n
+        1. Biskuat
+        2. Le Mineral
+        0. Keluar
+        Masukkan nomor menu : `);
+
+    if (halamanUtama === 1) {
+      lihatData();
+    } else if (halamanUtama === 2) {
+      lihatDataLemineral();
+    } else if (halamanUtama === 0) {
+      break;
+    }
+  } while (true);
+</script>
