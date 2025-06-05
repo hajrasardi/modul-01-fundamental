@@ -51,11 +51,44 @@ Buatlah program untuk melihat produk dan menambahkan produk :
   }
 
   function tambahData() {
-    let pilihData = prompt("Pilih data yang mau ditambah :");
-    if (pilihData == "1") {
+    const pilihData = prompt(`===Daftar Barang Yang ada=== \n
+    1. Biskuat
+    2. Le Miniral
+    
+    Pilih Database yang ingin ditambahkan : `);
+    if (pilihData === "1") {
+      const masukkanNamaBarang = prompt("Masukkan nama barang :");
+      const masukkanJumlahBarang = prompt("Masukkan jumlah barang :");
+      databaseBiskuat.push([masukkanNamaBarang, masukkanJumlahBarang]);
+      alert(
+        `data ${masukkanNamaBarang} dan jumlah stok ${masukkanJumlahBarang} berhasil ditambahkan`
+      );
+    } else if (pilihData === "2") {
+      const masukkanNamaBarang = prompt("Masukkan nama barang :");
+      const masukkanJumlahBarang = prompt("Masukkan jumlah barang");
+      databaseLemineral.push([masukkanNamaBarang, masukkanJumlahBarang]);
+      alert(
+        `data ${masukkanNamaBarang} dan jumlah stok ${masukkanJumlahBarang} berhasil ditambahkan`
+      );
+    }
+  }
+
+  function hapusData() {
+    const hapusData = prompt(`=== Daftar Barang=== \n
+      1. Biskuat
+      2. Le Mineral
+
+      pilih database yang ingin dihapus : `);
+    if (hapusData === "1") {
       lihatData();
-      let masukkanData = prompt("Masukkan data :");
-      databaseBiskuat.push(masukkanData);
+      const deleted = parseInt(prompt("pilih barang yang ingin dihapus : "));
+      databaseBiskuat.splice(deleted - 1, 1);
+      alert(`${deleted} data berhasil dihapus`);
+    } else if (hapusData === "2") {
+      lihatDataLemineral();
+      const deleted = parseInt(prompt("pilih barang yang akan dihapus : "));
+      databaseLemineral.splice(deleted - 1, 1);
+      alert(`${deleted} berhasil dihapus`);
     }
   }
 
@@ -64,6 +97,7 @@ Buatlah program untuk melihat produk dan menambahkan produk :
         1. Biskuat
         2. Le Mineral
         3. Tambah Data
+        4. Hapus Data
         0. Keluar
         Masukkan nomor menu : `);
 
@@ -73,6 +107,8 @@ Buatlah program untuk melihat produk dan menambahkan produk :
       lihatDataLemineral();
     } else if (halamanUtama === "3") {
       tambahData();
+    } else if (halamanUtama === "4") {
+      hapusData();
     } else if (halamanUtama === "0") {
       break;
     }
