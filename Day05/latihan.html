@@ -19,13 +19,13 @@ Buatlah program untuk melihat produk dan menambahkan produk :
   let [ukuran, jumlahBiskuat] = databaseLemineral;
 
   //   Buat halaman untuk landing page
-  const halamanUtama = prompt(`=== Selamat Datang === \n
-  1. Biskuat
-  2. Le Mineral
-  3. keluar
+  // const halamanUtama = prompt(`=== Selamat Datang === \n
+  // 1. Biskuat
+  // 2. Le Mineral
+  // 0. keluar
 
-  Masukkan nomor menu : `);
-  // Cek running apakah ada error
+  // Masukkan nomor menu : `);
+  // // Cek running apakah ada error
 
   function lihatData() {
     // penampung output tampilan data biskuat
@@ -50,18 +50,30 @@ Buatlah program untuk melihat produk dan menambahkan produk :
     alert(menu);
   }
 
+  function tambahData() {
+    let pilihData = prompt("Pilih data yang mau ditambah :");
+    if (pilihData == "1") {
+      lihatData();
+      let masukkanData = prompt("Masukkan data :");
+      databaseBiskuat.push(masukkanData);
+    }
+  }
+
   do {
     const halamanUtama = prompt(`=== Selamat Datang === \n
         1. Biskuat
         2. Le Mineral
+        3. Tambah Data
         0. Keluar
         Masukkan nomor menu : `);
 
-    if (halamanUtama === 1) {
+    if (halamanUtama === "1") {
       lihatData();
-    } else if (halamanUtama === 2) {
+    } else if (halamanUtama === "2") {
       lihatDataLemineral();
-    } else if (halamanUtama === 0) {
+    } else if (halamanUtama === "3") {
+      tambahData();
+    } else if (halamanUtama === "0") {
       break;
     }
   } while (true);
