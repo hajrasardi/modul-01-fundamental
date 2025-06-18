@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JC Surabaya - Frontend Development Module (Form Registrasi)</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <h2>Formulir Registrasi</h2>
+      <label for="fullname">Nama Lengkap</label>
+      <input type="text" name="fullname" id="fullname" required /><br /><br />
+      <label for="email">Email :</label>
+      <input type="text" name="email" id="email" required /><br /><br />
+      <label for="password">Kata Sandi :</label>
+      <input type="password" id="password" name="password" /><br /><br />
+      <label for="gender">Jenis Kelamin :</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Laki-laki</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Perempuan</label><br /><br />
+      <label for="tanggalLahir">Tanggal Lahir</label>
+      <input type="date" id="tanggalLahir" name="tanggalLahir" /><br /><br />
+      <label for="kota">Pilih Kota :</label>
+      <select name="kota" id="kota">
+        <option value="jakarta">Jakarta</option>
+        <option value="bandung">Bandung</option>
+        <option value="surabaya">Surabaya</option></select
+      ><br /><br />
+      <label for="fav-col">Warna Kesukaan :</label>
+      <input type="color" id="fav-col" name="fav-col" /><br /><br />
+      <label for="upload-ktp">Upload KTP :</label>
+      <input type="file" id="upload-ktp" name="upload-ktp" /><br /><br />
+      <label for="bio">Tentang anda :</label>
+      <textarea name="bio" id="bio" rows="4" cols="30"></textarea><br /><br />
+      <button type="button">Daftar</button>
+    </form>
+  </body>
+</html>

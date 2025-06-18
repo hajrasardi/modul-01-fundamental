@@ -1,0 +1,21 @@
+.external-section {
+  background-color: #e0f7fa;
+  padding: 20px;
+  margin-top: 30px;
+}
+.external-section h2 {
+  color: teal;
+  text-align: center;
+}
+.external-section p {
+  color: #555;
+  font-size: 16px;
+  padding: 10px;
+}
+.external-section button {
+  background-color: orange;
+  color: white;
+  padding: 10px 15pc;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      /**Tempat Internal CSS
+        */
+      .internal-section {
+        padding: 50px;
+        border-bottom: 1px solid #ddd;
+      }
+      .internal-section h2 {
+        color: darkred;
+        text-align: center;
+      }
+      .internal-section p {
+        color: #444;
+        font-size: 16px;
+        padding: 10px;
+      }
+      .internal-section button {
+        background-color: navy;
+        color: white;
+        padding: 8px 15pc;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline CSS-->
+    <div>
+      <h2 style="color: aqua; text-align: center">Contoh Inline Style</h2>
+      <p style="font-size: 16px; color: blue">
+        Ini adalah paragraf dengan
+        <strong style="color: brown">inline CSS style</strong>
+      </p>
+      <button
+        type="button"
+        style="
+          background-color: blueviolet;
+          color: aliceblue;
+          padding: 10px;
+          border-radius: 8px;
+        "
+      >
+        Tombol Inline
+      </button>
+    </div>
+    <div class="section internal-section">
+      <h2>Contoh internal CSS</h2>
+      <p>Paragraf ini menggunakan gaya yang didefinisikan di tag</p>
+      <button>Tombol Internal</button>
+    </div>
+    <div class="section external-section">
+      <!--External Section-->
+      <h2>Contoh External CSS</h2>
+      <p>Biassanya CSS ini berasal dari file seperti style.css</p>
+      <button type="button">Tombol External</button>
+    </div>
+  </body>
+</html>

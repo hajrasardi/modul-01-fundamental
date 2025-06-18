@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS: Media Query</title>
+    <style>
+      /** Small Screen*/
+      @media screen and (max-width: 480px) {
+        .text-sm-red {
+          color: red;
+        }
+      }
+      /** Medium Screen*/
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        .text-md-aqua {
+          color: aqua;
+        }
+      }
+      /** Large Screen*/
+      @media screen and (min-width: 769px) and (max-width: 1440px) {
+        .text-lg-orange {
+          color: orange;
+        }
+      }
+      /** Extra Large Screen*/
+      @media screen and (min-width: 1441px) and (max-width: 1920px) {
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-sm-red text-md-aqua text-lg-orange">
+      Welcome to the jungle
+    </h1>
+  </body>
+</html>
